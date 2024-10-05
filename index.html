@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Enhancement Comparison</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .img-container {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .img-container img {
+            width: 100%;
+            height: auto;
+        }
+        .img-before, .img-after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .img-after {
+            clip: rect(0, 0, auto, 0);
+        }
+        .slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #ff0000;
+            cursor: ew-resize;
+            z-index: 2;
+        }
+        .range-input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: ew-resize;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="img-container">
+            <img src="image_before.jpg" alt="Before Image" class="img-before">
+            <img src="image_after.jpg" alt="After Image" class="img-after" id="afterImage">
+            <div class="slider" id="slider"></div>
+            <input type="range" min="0" max="100" value="50" class="range-input" id="rangeInput">
+        </div>
+    </div>
+
+    <script>
+        const rangeInput = document.getElementById('rangeInput');
+        const slider = document.getElementById('slider');
+        const afterImage = document.getElementById('afterImage');
+
+        rangeInput.addEventListener('input', function() {
+            const value = this.value;
+            slider.style.left = value + '%';
+            afterImage.style.clip = `rect(0, ${value}%, auto, 0)`;
+        });
+
+        // 初始化为中间位置
+        window.onload = function() {
+            rangeInput.value = 50;
+            slider.style.left = '50%';
+            afterImage.style.clip = 'rect(0, 50%, auto, 0)';
+        };
+    </script>
+
+</body>
+</html>
