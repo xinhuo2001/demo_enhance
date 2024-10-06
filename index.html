@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> DPED Project </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="js/modernizr.js"></script>
+    <meta name="viewport" content="width=device-width">
+
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-105303874-1', 'auto');
+	  ga('send', 'pageview');
+    </script>
+</head>
+
+<!--
+<button id="demo-button" class="online-demo" onclick="open_demo();"><img src="assets/img/demo_button2.png"></button> 
+
+<div id="demos" style="display:none">
+	<a href="#" style="position: fixed; right: 2.2vmax; top: 6.3vw; color: white; z-index:9999; text-decoration: none; font-size: 1.2vmax;" onclick="close_demo()"> &#10006; </a>
+	<iframe class="demo" src="http://quality-gpu.eastus.cloudapp.azure.com:8080" name="targetframe" allowTransparency="true" scrolling="yes" frameborder="0" >
+	<!--<iframe class="demo" src="http://127.0.0.1:5000/" name="targetframe" allowTransparency="true" scrolling="yes" frameborder="0" >
+	</iframe>
+</div>
+-->
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+<div id="title">
+	<!-- yzf：修改标题 -->
+<h1 class="title"> Atheistic Auto White Banlace </h1> 
+<!-- yzf: 修改作者和邮箱 -->
+<table class="authors">
+<tr>
+	<td>Author1</td>
+	<td><a target="_blank" class = "link-invisible" href="https://www.vision.ee.ethz.ch/en/members/detail/282/">Author2</a></td>
+	<td><a target="_blank" class = "link-invisible" href="http://www.vision.ee.ethz.ch/~timofter/">Author3</a></td>
+	<td><a target="_blank" class = "link-invisible" href="http://www.vision.ee.ethz.ch/~vanhoeyk/pro/">Author4</a></td>
+	<td><a target="_blank" class = "link-invisible" href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1">Author5</a></td>
+</tr>
+<tr class="emails">
+	<td>ihnatova@vision.ee.ethz.ch</td>
+	<td>nk@vision.ee.ethz.ch</td>
+	<td>timofter@vision.ee.ethz.ch</td>
+	<td>vanhoey@vision.ee.ethz.ch</td>
+	<td>vangool@vision.ee.ethz.ch</td>
+</tr>
+</td>
+</table>
+
+<h1 class="institute"> 2025 Paper </h1>
+</div>
+
+<div id="abstract">
+	<div>
+		<div class="title-arxiv">
+			<!-- yzf: 修改论文封面, 链接，论文信息 -->
+	       	<p><a target="_blank" href="https://arxiv.org/pdf/1704.02470.pdf"><img src="assets/img/dped.png" width="100%"></a></p>
+	    </div>
+		<div class="title-info">
+	    	<p> <span style="font-weight:bold">Abstract:</span> Despite a rapid rise in the quality of built-in smartphone cameras, their physical limitations - small sensor size, compact lenses and the lack of specific hardware, - impede them to achieve the quality results of DSLR cameras. In this work we present an end-to-end deep learning approach that bridges this gap by translating ordinary photos into DSLR-quality images. We propose learning the translation function using a residual convolutional neural network that improves both color rendition and image sharpness. Since the standard mean squared loss is not well suited for measuring perceptual image quality, we introduce a composite perceptual error function that combines content, color and texture losses. The first two losses are defined analytically, while the texture loss is learned in an adversarial fashion. We also present DPED, a large-scale dataset that consists of real photos captured from three different phones and one high-end reflex camera. Our quantitative and qualitative assessments reveal that the enhanced image quality is comparable to that of DSLR-taken photos, while the methodology is generalized to  any type of digital camera.</p>
+	        <p>
+	        	<a target="_blank" href="https://arxiv.org/pdf/1704.02470.pdf"> arXiv: 1704.02470, 2017 </a>
+	        	<a target="_blank" href="wespe.html"><button class="follow-up"> view the follow-up paper >> </button></a>
+	        	<!--<a target="_blank" href="http://phancer.com/"><button class="follow-up" style="padding-left: 2.9vw; padding-right: 2.9vw; background-color: #f16b59;"> online demo </button></a>-->
+	        </p>
+		</div>
+	</div>
+</div>
+
+<div id="demo">
+
+	<h1 class="title">
+		渲染数据集 
+		<a target="_blank" href="dped_iphone.html"><button class="btn-results-dped"> more results </button></a>
+	</h1>
+	
+
+	<figure class="cd-image-container">
+		<img src="mydemo/渲染数据集/0_ori.png" alt="Original Image">
+		<span class="cd-image-label" data-type="original">Original</span>
+		
+		<div class="cd-resize-img">
+			<img src="mydemo/渲染数据集/0_mod.png" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified">Modified</span>
+		</div>
+		
+		<span class="cd-handle cd-first"></span>
+	</figure>
+
+	<figure class="cd-image-container">
+		<img src="mydemo/渲染数据集/85_ori.png" alt="Original Image">
+		<span class="cd-image-label" data-type="original">Original</span>
+		
+		<div class="cd-resize-img">
+			<img src="mydemo/渲染数据集/85_mod.png" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified">Modified</span>
+		</div>
+		
+		<span class="cd-handle cd-first"></span>
+	</figure>
+
+	<h1 class="title">
+		set2 数据集
+		<a target="_blank" href="dped_blackberry.html"><button class="btn-results-dped"> more results </button></a>
+	</h1>
+	
+	<figure class="cd-image-container">
+		<img src="mydemo/set2/38_ori.png" alt="Original Image">
+		<span class="cd-image-label" data-type="original">Original</span>
+		
+		<div class="cd-resize-img">
+			<img src="mydemo/set2/38_mod.png" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified">Modified</span>
+		</div>
+		
+		<span class="cd-handle"></span>
+	</figure>
+
+	<figure class="cd-image-container">
+		<img src="mydemo/set2/49_ori.png" alt="Original Image">
+		<span class="cd-image-label" data-type="original">Original</span>
+		
+		<div class="cd-resize-img">
+			<img src="mydemo/set2/49_mod.png" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified">Modified</span>
+		</div>
+		
+		<span class="cd-handle"></span>
+	</figure>
+
+	<h1 class="title">
+		多光数据集
+		<a target="_blank" href="dped_sony.html"><button class="btn-results-dped"> more results </button></a>
+	</h1>
+	
+	<figure class="cd-image-container">
+		<img src="mydemo/多光数据集/124_ori.png" alt="Original Image">
+		<span class="cd-image-label" data-type="original">Original</span>
+		
+		<div class="cd-resize-img">
+			<img src="mydemo/多光数据集/124_mod.png" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified">Modified</span>
+		</div>
+		
+		<span class="cd-handle"></span>
+	</figure>
+
+	<figure class="cd-image-container">
+		<img src="mydemo/多光数据集/10_ori.png" alt="Original Image">
+		<span class="cd-image-label" data-type="original">Original</span>
+		
+		<div class="cd-resize-img">
+			<img src="mydemo/多光数据集/10_mod.png" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified">Modified</span>
+		</div>
+		
+		<span class="cd-handle"></span>
+	</figure>
+
+</div>
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	function open_demo() {
+		document.getElementById('demos').style.display="block";
+		document.getElementById('demo-button').style.display="none";
+	}
+	function close_demo() {
+		document.getElementById('demos').style.display="none";
+		document.getElementById('demo-button').style.display="block";
+	}
+</script>
+</body>
+
+</html>
